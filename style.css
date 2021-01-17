@@ -1,0 +1,33 @@
+*{
+   margin:0;
+   padding: 0;
+}
+
+.carousel-container{
+   width: 300px;
+   height: 400px;
+    overflow: hidden;  
+   position: relative;
+}
+
+.carousel-container img{
+    position: absolute;  
+}
+
+
+.dot {
+   cursor: pointer;
+  
+   cursor: pointer;
+   height: 15px;
+   width: 15px;
+   margin: 0 30px;
+   background-color: #bbb;
+   border-radius: 50%;
+   display: inline-block;
+   
+ }
+ 
+ .active{
+    background-color: black;
+ }
