@@ -16,21 +16,33 @@ console.log(imagesArray);
 
 let currentIndex = 0;
 
+dotcontainer = document.getElementById('position');
+
+dot=[];
+    for (i = 0; i < imagesArray.length; i++) {
+        var dots=document.createElement("span");
+        dots.classList.add("dot");
+        dotcontainer.append(dots);
+        dots.setAttribute("onclick","currentSlide("+i+")");
+        dot.push(dots);
+    
+   }
+        dot[currentIndex].classList.add("active");
+
 function currentSlide(n){
     
-    var dots = document.getElementsByClassName("dot");
-    console.log(dots);
-    if(currentIndex >2 ){
+    // var dots = document.getElementsByClassName("dot");
+    if(currentIndex > dot.length - 1 ){
         currentIndex = 0;
     }
     if(currentIndex < 0 ){
         currentIndex = 2;
     }
 
-    for (i = 0; i < dots.length; i++) {
-        console.log(dots[i].className = dots[i].className.replace(" active", ""));
+    for (i = 0; i < dot.length; i++) {
+        console.log(dot[i].className = dot[i].className.replace(" active", ""));
     }
-    console.log(dots[currentIndex].className += " active");
+    console.log(dot[currentIndex].className += " active");
 }
 
 

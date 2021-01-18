@@ -32,14 +32,12 @@
    background-color: black;
    color: white;
 }
-.position{
+#position{
    position: absolute;
    bottom: 80px;
    left: 400px;
 }
 .dot {
-   cursor: pointer;
-  
    cursor: pointer;
    height: 15px;
    width: 15px;
