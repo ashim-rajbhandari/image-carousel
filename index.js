@@ -68,9 +68,9 @@ function animate(n){
     currentSlide();
  }
  
-// setInterval(function(){ 
-//         animate();
-//      }, 4000);
+setInterval(function(){ 
+        animate();
+     }, 4000);
 
  const btn = document.getElementById('btn');
  btn.addEventListener('click',animate);
