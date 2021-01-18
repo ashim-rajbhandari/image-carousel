@@ -1,7 +1,7 @@
 const images = document.getElementsByTagName('img');
 console.log(images);
 const width = 800;
-const height = 400;
+const height = 500;
 
 const imagesArray= [];
 
@@ -15,20 +15,16 @@ console.log(imagesArray);
 
 
 let currentIndex = 0;
-// function currentSlide(currentIndex) {
-//     var dots = document.getElementsByClassName("dot");
-//     console.log(dots);
-//     for (i = 0; i < dots.length; i++) {
-//         dots[i].className = dots[i].className.replace(" active", "");
-//     }
-//     dots[currentIndex].dot += " active";
-//   }
+
 function currentSlide(n){
     
     var dots = document.getElementsByClassName("dot");
     console.log(dots);
     if(currentIndex >2 ){
         currentIndex = 0;
+    }
+    if(currentIndex < 0 ){
+        currentIndex = 2;
     }
 
     for (i = 0; i < dots.length; i++) {
@@ -57,11 +53,12 @@ function animate(n){
         console.log(image.style.left =(( index - currentIndex) % imagesArray.length * width) + "px");
     
     })
+    currentSlide();
  }
  
-//  setInterval(function(){ 
-//        animate();
-//     }, 1000);
+setInterval(function(){ 
+        animate();
+     }, 4000);
 
  const btn = document.getElementById('btn');
  btn.addEventListener('click',animate);
